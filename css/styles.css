@@ -1,0 +1,247 @@
+/* .loader {
+  background: #000;
+  background: radial-gradient(#222, #000);
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+}
+
+.loader-inner {
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+
+.loader-line-wrap {
+  animation: spin 2000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+  box-sizing: border-box;
+  height: 50px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform-origin: 50% 100%;
+  width: 100px;
+}
+.loader-line {
+  border: 4px solid transparent;
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 100px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+.loader-line-wrap:nth-child(1) {
+  animation-delay: -50ms;
+}
+.loader-line-wrap:nth-child(2) {
+  animation-delay: -100ms;
+}
+.loader-line-wrap:nth-child(3) {
+  animation-delay: -150ms;
+}
+.loader-line-wrap:nth-child(4) {
+  animation-delay: -200ms;
+}
+.loader-line-wrap:nth-child(5) {
+  animation-delay: -250ms;
+}
+
+.loader-line-wrap:nth-child(1) .loader-line {
+  border-color: hsl(0, 80%, 60%);
+  height: 90px;
+  width: 90px;
+  top: 7px;
+}
+.loader-line-wrap:nth-child(2) .loader-line {
+  border-color: hsl(60, 80%, 60%);
+  height: 76px;
+  width: 76px;
+  top: 14px;
+}
+.loader-line-wrap:nth-child(3) .loader-line {
+  border-color: hsl(120, 80%, 60%);
+  height: 62px;
+  width: 62px;
+  top: 21px;
+}
+.loader-line-wrap:nth-child(4) .loader-line {
+  border-color: hsl(180, 80%, 60%);
+  height: 48px;
+  width: 48px;
+  top: 28px;
+}
+.loader-line-wrap:nth-child(5) .loader-line {
+  border-color: hsl(240, 80%, 60%);
+  height: 34px;
+  width: 34px;
+  top: 35px;
+}
+
+@keyframes spin {
+  0%,
+  15% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px;
+  background-color: #002031;
+}
+
+.s2 {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.s1 {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 50vh;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: transparent;
+}
+
+.bigcon {
+  position: absolute;
+  height: 95px;
+  width: 95px;
+  top: 50vh;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: transparent;
+  animation: bigcon 2s infinite linear;
+  animation-delay: 0.25s;
+}
+
+.b {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.s {
+  width: 25px;
+  height: 25px;
+  animation: small 2s infinite ease;
+  box-shadow: 0px 2px rgba(0, 0, 0, 0.3);
+  background-color: #46b9ff;
+}
+
+.s:nth-child(1) {
+  top: 0%;
+  left: 0%;
+}
+
+.s:nth-child(2) {
+  top: 0%;
+  right: 0%;
+}
+
+.s:nth-child(3) {
+  right: 0%;
+  bottom: 0%;
+}
+
+.s:nth-child(4) {
+  bottom: 0%;
+  left: 0%;
+}
+
+.big {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #54f7f8, 0px 0px 20px #54f7f8, 0px 0px 30px #54f7f8,
+    0px 0px 50px #54f7f8, 0px 0px 60px #54f7f8;
+  z-index: 1;
+  background-color: #54f7f8;
+  animation: bigball 1s infinite linear;
+}
+
+.sb1 {
+  animation-delay: -1.75s;
+}
+.sb6 {
+  animation-delay: -1.5s;
+}
+.sb2 {
+  animation-delay: -1.25s;
+}
+.sb7 {
+  animation-delay: -1s;
+}
+.sb3 {
+  animation-delay: -0.75s;
+}
+.sb8 {
+  animation-delay: -0.5s;
+}
+.sb4 {
+  animation-delay: -0.25s;
+}
+.sb5 {
+  animation-delay: -0s;
+}
+
+@keyframes bigcon {
+  0% {
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  100% {
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(405deg);
+  }
+}
+
+@keyframes small {
+  0% {
+    transform: scale(1);
+    background-color: #46b9ff;
+  }
+  10% {
+    transform: scale(1.3);
+    background-color: #54f7f8;
+  }
+  15% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1);
+    background-color: #46b9ff;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #46b9ff;
+  }
+}
